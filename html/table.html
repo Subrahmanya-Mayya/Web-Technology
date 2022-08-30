@@ -7,13 +7,16 @@
     <title>Table</title>
     <style></style>
   </head>
-  <body>
+  <body id="body">
     <!--
         rules - common border
         cellpadding - space between content and border
         cellspacing - space between each cell
         align - align table (left,right,center)
     -->
+    <details id="comments">
+      <summary>Show notes</summary>
+    </details>
     <table border align="center" rules="all" cellpadding="10px">
       <tr>
         <th>Name</th>
@@ -42,4 +45,16 @@
       </tr>
     </table>
   </body>
+  <script>
+    const body = document.querySelector("#body");
+    console.log(body.childNodes.length);
+    for (let i = 0; i < body.childNodes.length; i++) {
+      let e = body.childNodes[i];
+      if (e.nodeType === 8) {
+        let pre = document.createElement("pre");
+        pre.textContent = e.data;
+        document.querySelector("#comments").appendChild(pre);
+      }
+    }
+  </script>
 </html>

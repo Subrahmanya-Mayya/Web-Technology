@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body id="body">
+    <!-- 
+        Forms are used to collect data from the end user.
+        The inputs collected from the form will be sent to the server for processing.
+        Forms are used to get the information and store the information in the database.
+
+        Form element attributes
+        - target
+        - method
+        - action
+
+        GET and POST
+        - Get method is used to get the data from the database and data will be displayed on the webpage url
+        - Post method is used to create the data in the database and it will hide the data from the user but it will be submitted to the database.
+
+        Form input element attributes
+        - name
+        - class
+        - id
+        - type
+        - required
+        - autofocus
+        - readonly
+        - minlength
+        - maxlength
+        - placeholder
+        
+        Different type values
+        - text
+        - number
+        - date
+        - radio
+        - checkbox
+        - color
+        - submit
+        - reset
+        - file
+     -->
+    <details id="comments">
+      <summary>Show notes</summary>
+    </details>
+    <form action="">
+      <div>
+        <label for="fname">Enter Your First Name : </label>
+        <input
+          type="text"
+          name="fname"
+          id="fname"
+          maxlength="10"
+          minlength="3"
+          placeholder="name"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="lname">Enter Your Last Name : </label>
+        <input type="text" name="lname" id="lname" />
+      </div>
+      <br />
+      <div>
+        <label>Enter Your Gender : </label>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" checked />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" />
+      </div>
+      <br />
+      <div>
+        <label for="phone">Enter Your Phone Number : </label>
+        <input type="number" name="phone" id="phone" />
+      </div>
+      <br />
+      <div>
+        <label for="email">Enter your email : </label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <br />
+      <div>
+        <label for="date">Enter Your DOB</label>
+        <input type="date" name="date" id="date" />
+      </div>
+      <br />
+      <div>
+        <label for="pass">Enter your password : </label>
+        <input type="password" name="pass" id="pass" minlength="6" />
+      </div>
+      <br />
+      <div>
+        <label for="color">Enter Your Favorite Color : </label>
+        <input type="color" name="color" id="color" />
+      </div>
+      <br />
+      <div>
+        <label for="file">Select Your Resume : </label>
+        <input type="file" name="file" id="file" />
+      </div>
+      <br />
+      <div>
+        <label for="check">I Accept Terms And Condition</label>
+        <input type="checkbox" name="check" id="check" />
+      </div>
+      <br />
+      <div>
+        <input type="submit" />
+        <input type="reset" />
+      </div>
+    </form>
+  </body>
+  <script>
+    const body = document.querySelector("#body");
+    console.log(body.childNodes.length);
+    for (let i = 0; i < body.childNodes.length; i++) {
+      let e = body.childNodes[i];
+      if (e.nodeType === 8) {
+        let pre = document.createElement("pre");
+        pre.textContent = e.data;
+        document.querySelector("#comments").appendChild(pre);
+      }
+    }
+  </script>
+</html>
