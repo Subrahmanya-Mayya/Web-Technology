@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      form {
+        width: fit-content;
+        margin: 0 auto;
+      }
+      div {
+        margin-bottom: 20px;
+      }
+      div:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="singlepage.html"><-- go to home</a></p>
+    <h2 align="center">Register</h2>
+    <form action="">
+      <fieldset>
+        <div>
+          <label for="username">Enter Username : </label>
+          <input type="text" name="username" id="username" required />
+        </div>
+        <div>
+          <label for="useremail">Enter Email : </label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div>
+          <label for="phone">Enter Phone Number : </label>
+          <input type="number" name="phone" id="number" required />
+        </div>
+        <div>
+          <label for="dob">Enter DOB : </label>
+          <input type="date" name="dob" id="dob" required />
+        </div>
+        <div>
+          <label for="pass">Enter Password : </label>
+          <input type="password" name="pass" id="pass" required />
+        </div>
+        <div>
+          <input type="checkbox" name="terms" id="terms" required />
+          <label for="terms"> I agree to terms and conditions </label>
+        </div>
+        <div>
+          <input type="submit" value="register" />
+          <input type="reset" />
+        </div>
+        <div>
+          Already have an account ? <a href="signin.html">Login here</a>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
