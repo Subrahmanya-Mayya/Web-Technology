@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo class</title>
+    <style>
+      a {
+        font-size: 100px;
+      }
+      a:link {
+        color: red;
+      }
+      a:visited {
+        color: cornflowerblue;
+      }
+      a:hover {
+        color: aqua;
+      }
+      a:active {
+        color: tomato;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        background-color: green;
+        text-transform: uppercase;
+      }
+      div:hover {
+        width: 250px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <!-- 
+        Pseudo classes
+        - Link
+        - Visited
+        - Hover
+        - Active
+        Syntax:
+        selector:pseudo-class{
+            ---------------
+            css style rules
+            ---------------
+        }
+        Always hover should be used after link and visited
+        active should be used after hover
+     -->
+    <details id="comments">
+      <summary>show notes</summary>
+    </details>
+    <a href="#">Im a Link</a>
+    <div>Hover me</div>
+    <script>
+      const body = document.querySelector("#body");
+      console.log(body.childNodes.length);
+      for (let i = 0; i < body.childNodes.length; i++) {
+        let e = body.childNodes[i];
+        if (e.nodeType === 8) {
+          let pre = document.createElement("pre");
+          pre.textContent = e.data;
+          document.querySelector("#comments").appendChild(pre);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Element</title>
+    <style>
+      p::first-letter {
+        color: red;
+        font-size: 20px;
+      }
+      p::first-line {
+        color: orange;
+      }
+
+      p::first-word {
+        color: red;
+      }
+
+      ::selection {
+        color: brown;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+      aspernatur quidem debitis totam quae harum ut ipsum voluptates placeat ea,
+      dignissimos provident voluptatem eum officia! Ab error corrupti natus
+      quaerat? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
+      doloremque, nesciunt fugit, dolorem fuga exercitationem officia eveniet
+      nam unde nisi maxime libero! Nisi repellendus magni eaque aliquam itaque
+      maiores numquam.
+    </p>
+  </body>
+</html>
