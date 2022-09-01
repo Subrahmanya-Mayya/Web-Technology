@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+        div+p{
+            color:red;
+        }
+    </style>
+  </head>
+  <body id="body">
+    <!-- 
+        Type of selectors
+        - Id selector (#para)
+        - Class selector (.para)
+        - Element selector (p)
+        - Universal selector (*)
+        - Group selector (p,span)
+        - Descendant selector (Selects direct members from parent.Ex: div p)
+        - Child selector (Selects direct and indirect members from parent.Ex: div>p)
+        - Adjacent Sibling selector (First occurrence of p is selected after closing parent tag.Ex: div+p)
+        - General Sibling selector (Selects all the occurrence of p after closing parent tag.div~p)
+     -->
+     <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis unde aspernatur doloremque quia debitis blanditiis obcaecati asperiores ducimus incidunt et, doloribus ab laudantium eaque soluta repellendus nobis eveniet exercitationem eos.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reprehenderit sapiente enim aut quasi at autem suscipit placeat maiores aspernatur quibusdam distinctio repellat voluptas quia, exercitationem fugiat cumque officiis quis.</p>
+        <p><section><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolores optio cum dolorem omnis! Impedit harum quia illum iure dolorem maiores quasi in nemo vel! Laudantium officiis alias amet sint.</p></section></p>
+     </div>
+     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo perferendis dolorem tenetur! Non fugit similique suscipit tempora est, mollitia voluptatibus placeat distinctio. Laborum sunt error quo nobis eius, laboriosam pariatur.</p>
+     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, repellat tenetur. Sit suscipit est soluta, maiores sed quasi provident aspernatur earum velit cupiditate quis minima magni quibusdam doloribus quod consequuntur.</p>
+  </body>
+</html>
